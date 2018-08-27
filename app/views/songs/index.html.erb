@@ -1,8 +1,17 @@
-<h1>All Songs</h1>
-
-<% @songs.each do |song| %>
-  <ul>
-    <li>Title: <%= song.title %></li>
-    <li>Play Count: <%= song.play_count %></li>
-  </ul>
-  <% end %>
+<h1> Songs </h1>
+   <% @grouped_songs.each do |group| %>
+    <div class="songs-container">
+     <% group.each do |song| %>
+     <div class='song-card'>
+       <%= image_tag "vinyl.jpg", class:'photo' %>
+         <div class="song-details">
+           </br>
+           </br>
+           <p><%= song.title %></p>
+           <p><%= song.length %> seconds</p>
+           <p>Play Count: <%= song.play_count %></p>
+         </div>
+      </div>
+     <% end %>
+   </div>
+<% end %>
