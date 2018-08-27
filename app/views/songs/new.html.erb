@@ -1,0 +1,12 @@
+<h1>Songs</h1>
+<ul>
+  <%= form_for [@artist, @song] do |f| %>
+  <li><%= f.label :title %></li>
+  <li><%= f.text_field :title %></li>
+  <li><%= f.label :length %></li>
+  <li><%= f.text_field :length %></li>
+  <li><%= f.label :play_count %></li>
+  <li><%= f.text_field :play_count %></li>
+  <li><%= f.submit %></li>
+  <% end %>
+</ul>
